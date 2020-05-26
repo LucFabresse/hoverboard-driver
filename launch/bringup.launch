@@ -1,0 +1,13 @@
+<launch>
+  
+  <include file="$(find teleop_twist_joy)/launch/teleop.launch">
+	<arg name="joy_config" value="xbox" />
+	<arg name="joy_dev" value="/dev/input/js0" />
+  </include>
+
+  <!-- ROS control -->
+  <include file="$(find hoverboard_driver)/launch/hoverboard.launch" />
+  
+</launch>
+
+
