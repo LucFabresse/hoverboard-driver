@@ -1,0 +1,12 @@
+<launch>
+  
+ <node name="teleop" pkg="teleop_twist_keyboard" type="teleop_twist_keyboard.py" output="screen" launch-prefix="xterm -e">
+  <remap from="cmd_vel" to="hoverboard_velocity_controller/cmd_vel"/>  
+ </node>
+
+  <!-- ROS control -->
+  <include file="$(find hoverboard_driver)/launch/hoverboard.launch" output="screen" />
+  
+</launch>
+
+
